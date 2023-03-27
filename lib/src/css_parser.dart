@@ -826,7 +826,9 @@ class ExpressionMapping {
               fontFeatures.add(FontFeature.enable(exp.text));
             }
           } else {
-            fontFeatures.add(FontFeature.enable(exp.text));
+            try {
+              fontFeatures.add(FontFeature.enable(exp.text));
+            } catch (e) {}
           }
         }
       }
